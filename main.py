@@ -51,8 +51,9 @@ class EmailProcessingFacade:
                     writer.writerow([additional_email])
         print("CSV processed successfully! Check", self.output_file)
 
-# Usage
-input_file = "peter_hni.csv"
-output_file = "peter_hni_processed.csv"
-facade = EmailProcessingFacade(input_file, output_file)
-facade.process_csv()
+if __name__=='__main__':
+    # Usage
+    input_file = "email_list.csv"
+    output_file = "email_list_processed.csv"
+    facade = EmailProcessingFacade(input_file, output_file)
+    facade.process_csv()
