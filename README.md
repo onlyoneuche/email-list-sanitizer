@@ -7,16 +7,6 @@ This Python script is designed to extract email addresses from a CSV file, remov
 - Removes duplicate email addresses
 - Writes cleaned data to a new CSV file, with one email address per row
 
-## Design Patterns
-
-The script incorporates the following design patterns:
-
-1. **Strategy Pattern**: The `EmailExtractor` class and its concrete implementation `RegexEmailExtractor` follow the Strategy pattern, allowing for different email extraction strategies to be used interchangeably. This pattern promotes flexibility and extensibility, as new email extraction algorithms can be easily added without modifying the existing code.
-
-2. **Singleton Pattern**: The `EmailExtractorSingleton` class follows the Singleton pattern, ensuring that only one instance of the email extractor is created and shared throughout the application. This pattern promotes efficient resource usage and prevents unnecessary object creation.
-
-3. **Facade Pattern**: The `EmailProcessingFacade` class provides a simplified interface for email extraction and CSV processing, hiding the complexities of the underlying implementation from the client code. This pattern promotes code clarity and ease of use, as the client code only needs to interact with the facade class.
-
 ## Usage
 
 1. Import the necessary modules and classes.
